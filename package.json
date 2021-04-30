@@ -1,5 +1,5 @@
 {
-  "name": "tldr",
+  "name": "basic-electron-app",
   "version": "0.0.1",
   "description": "Cross-Platform desktop application using Electron and HTML5, CSS3 in Chromium along with JavaScript and NodeJS. Purpose of application is to understand basic fundamentals of Electron and perform syscalls and ipc interactions while creating a usefull application for day-to-day life",
   "main": "main/main.js",
