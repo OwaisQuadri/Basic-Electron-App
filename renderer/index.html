@@ -9,19 +9,117 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
-        div {
-            background-color: rgba(255, 0, 0, 0.20);
-            border-width: 1px;
-            border-style: solid;
+        html {
+            color: #1f1f1f;
+        }
+
+        .left-container {
+            background-color: #262626;
+            color: #cccccc;
+            width: 25%;
+            max-width: 235px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            padding: 0;
+            transition: left 0.3s ease;
+        }
+
+        a {
+            color: #cccccc;
+
+        }
+
+        a:hover {
+            color: #ffffff
+        }
+
+        .right-container {
+            background-color: #1f1f1f;
+            color: #cccccc;
+            width: 75%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            transition: width 0.3s ease;
+        }
+
+        /* div {
+            background-color: rgba(255, 255, 255, 0.01)
+        } */
+
+        .active {
+            font-weight: bold;
+        }
+
+        #load {
+            width: 70px;
+        }
+        .search-box,.search-box:focus{
+            background-color:#2d2d2d;
+            color: #cccccc;
+            border: none;
+        }
+        #search {
+            max-width: 165px;
+            width: max-content;
+        }
+        @media (max-width:940px){
+            #search {
+                display:none;
+                transition: display 0.3s ease;
+            }
+        }
+        @media (max-width: 720px) {
+            .left-container {
+                left: -25%;
+            }
+
+            .right-container {
+                width: 100%;
+
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid text-center">
+    <div class="container-fluid">
         <div class="row">
-            <div class="side-bar col-3">col1</div>
-            <div class="col-9">col2</div>
+            <div class="col-3 left-container">
+                <div style="width:100%">
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" aria-current="page" href="#">Generate TLDR</a>
+                        <form class="form-inline" style="width: 100%">
+                            <div class="row" style="width:100%;margin:0;">
+                                <div class="form-group" id="load">
+                                    <label for="search" class="form-control-plaintext"><a class="nav-link"
+                                            href="#">Load</a></label>
+                                </div>
+                                <div class="form-group" id="search">
+                                    <input class="search-box form-control" type="text" name="search" id="search"
+                                        placeholder="Search" style="width:100%;">
+                                </div>
+                            </div>
+
+                        </form>
+
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="m-4">
+                    <h1 class="">Title</h1>
+                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quaerat distinctio incidunt iure quasi eius cum temporibus dolore molestias
+                        facilis fugiat aperiam similique doloremque eveniet repellat, voluptate explicabo
+                        saepe! Quibusdam, ea?</p>
+                </div>
+            </div>
         </div>
     </div>
     </div>

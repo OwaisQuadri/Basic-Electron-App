@@ -22,7 +22,13 @@ function createWindow() {
         {
             label: 'File',
             submenu: [{
-                label: 'Some Action'
+                label: 'Generate TLDR',
+                accelerator: "CmdOrCtrl+G",
+                click(){}
+            },{
+                label: 'Load TLDR',
+                accelerator: "CmdOrCtrl+L",
+                click(){}
             }, { type: 'separator' }, {
                 label: 'Quit',
                 accelerator: 'CmdOrCtrl+Q',
